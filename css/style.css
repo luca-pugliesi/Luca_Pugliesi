@@ -1,0 +1,154 @@
+body {
+    background-color: #E7F1E7;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+}
+
+header img {
+    max-width: 100px;
+    margin: 48px 0 48px 48px;
+}
+
+header a img {
+    transition: transform 0.3s ease;
+}
+
+header a img:hover {
+    transform: scale(1.1);
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-size: 24px;
+}
+
+header a {
+    text-decoration: none;
+    color: #111;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+header nav a {
+    color: #666;
+}
+
+header nav a:hover {
+    color: #94B48D;
+}
+
+
+
+section.info {
+    background-color: #94B48D;
+    padding: 64px 16px;
+}
+
+section.info h1 {
+    margin: 0;
+    color: #fff;
+    font-weight: normal;
+    text-align: center;
+    font-size: 68px;
+}
+
+section.card ul li {
+    color: #94B48D;
+}
+
+section.card {
+    display: block;
+    max-width: 1440px;
+    margin: 48px auto;
+    gap: 100px;
+    padding: 0 16px;
+}
+
+section.card h2, section.card p {
+    margin: 0;
+    padding: 0;
+}
+
+
+section.card img {
+    height: 672px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+section.card h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #94B48D;
+    padding: 16px 16px 0 16px;
+}
+
+section.card p {
+    font-size: 18px;
+    color: #94B48D;
+    padding: 16px 16px 16px 16px;
+}
+
+section.card div {
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #94B48D;
+    padding: 32px 16px;
+    text-align: center;
+    border-top: 2px solid #fff;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width:600px) {
+    section.info h1 {
+        font-size: 48px;
+    }
+
+    header {
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    section.card div.item {
+        display: flex;
+        flex-direction: row;
+    }
+    section.card img {
+        height: 150px;
+        width: 150px;
+        margin: auto;
+        border-radius: 8px 0 0 0px;
+    }
+}
