@@ -1,11 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #E7F1E7;
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
+    overflow-x: hidden;
 }
 
 img {
     max-width: 100%;
+    height: auto;
 }
 
 header {
@@ -13,12 +19,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 16px;
+    padding: 16px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 header img {
     max-width: 100px;
-    margin: 48px 0 48px 48px;
+    margin: 32px 0;
 }
 
 header a img {
@@ -56,11 +64,10 @@ header nav a:hover {
     color: #94B48D;
 }
 
-
-
 section.info {
     background-color: #94B48D;
     padding: 64px 16px;
+    width: 100%;
 }
 
 section.info h1 {
@@ -79,15 +86,14 @@ section.card {
     display: block;
     max-width: 1440px;
     margin: 48px auto;
-    gap: 100px;
     padding: 0 16px;
+    width: 100%;
 }
 
 section.card h2, section.card p {
     margin: 0;
     padding: 0;
 }
-
 
 section.card img {
     height: 672px;
@@ -100,16 +106,16 @@ section.card h2 {
     font-size: 18px;
     font-weight: bold;
     color: #94B48D;
-    padding: 16px 16px 0 16px;
+    padding: 16px;
 }
 
 section.card p {
     font-size: 18px;
     color: #94B48D;
-    padding: 16px 16px 16px 16px;
+    padding: 0 16px 16px 16px;
 }
 
-section.card div {
+section.card div.item > div {
     background-color: #fff;
     border-radius: 8px;
 }
@@ -119,6 +125,7 @@ footer {
     padding: 32px 16px;
     text-align: center;
     border-top: 2px solid #fff;
+    width: 100%;
 }
 
 footer a {
@@ -131,24 +138,55 @@ footer a:hover {
     text-decoration: underline;
 }
 
-@media (max-width:600px) {
+@media (max-width: 768px) {
     section.info h1 {
-        font-size: 48px;
+        font-size: 36px;
     }
 
     header {
-        flex-direction: row;
-        gap: 16px;
+        flex-direction: column;
+        padding: 16px;
+        gap: 8px;
+    }
+
+    header img {
+        margin: 16px 0;
+        max-width: 80px;
+    }
+
+    header nav ul {
+        font-size: 18px;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    section.card {
+        margin: 24px auto;
+        padding: 0 16px;
     }
 
     section.card div.item {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
+
     section.card img {
-        height: 150px;
-        width: 150px;
-        margin: auto;
-        border-radius: 8px 0 0 0px;
+        height: auto;
+        max-height: 300px;
+        width: 100%;
+        border-radius: 8px 8px 0 0;
+    }
+
+    section.card h2 {
+        font-size: 16px;
+    }
+
+    section.card p {
+        font-size: 16px;
+    }
+
+    footer a {
+        font-size: 18px;
     }
 }
